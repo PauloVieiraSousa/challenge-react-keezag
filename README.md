@@ -1,9 +1,9 @@
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d8a5b0f2d64d4c6880fff74988e8b301)](https://www.codacy.com/manual/PauloVieiraSousa/challenge-react-keezag?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PauloVieiraSousa/challenge-react-keezag&amp;utm_campaign=Badge_Grade)
-
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d8a5b0f2d64d4c6880fff74988e8b301)](https://www.codacy.com/manual/PauloVieiraSousa/challenge-react-keezag?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PauloVieiraSousa/challenge-react-keezag&amp;utm_campaign=Badge_Grade)
+
 
 In the project directory, you can run:
 
