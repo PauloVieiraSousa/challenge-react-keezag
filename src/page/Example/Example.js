@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react';
 
-export default function Example(){
-    return <h1>Example</h1>
-}
+const Example = () => <h1>Example</h1>;
+
+export default Example;
