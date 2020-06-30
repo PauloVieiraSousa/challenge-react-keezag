@@ -2,10 +2,9 @@ import { SignIn } from '../../enums/signin.enums';
 import { users } from '../../mock/user.mock';
 
 function searchUser({ user, password }) {
-  debugger;
   return users.find(
     (item) =>
-      (item.user === user || item.email === user) && item.password === password
+      (item.email === user || item.user === user) && item.password === password
   );
 }
 
