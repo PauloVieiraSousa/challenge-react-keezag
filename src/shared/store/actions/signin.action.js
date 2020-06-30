@@ -1,16 +1,25 @@
 import { SignIn } from '../../enums/signin.enums';
 import { users } from '../../mock/user.mock';
 
-function searchUser({ user, password }) {
-  return users.find(
-    (item) =>
-      (item.email === user || item.user === user) && item.password === password
+function validateUser(data, user, password) {
+  return (
+    (data.email === user || data.user === user) && data.password === password
   );
+}
+
+function searchUser({ user, password }) {
+  return users.find((item) => validateUser(item, user, password));
+}
+
+function success(user) {
+  return { type: SignIn.SUCCESS, data: { user } };
+}
+
+function failure() {
+  return { type: SignIn.FAILURE, error: 'Usuario ou email incorreto' };
 }
 
 export function signin(data) {
   const user = searchUser(data);
-  return user
-    ? { type: SignIn.SUCCESS, data: { user } }
-    : { type: SignIn.FAILURE, error: 'Usuario ou email incorreto' };
+  return user ? success(user) : failure();
 }
