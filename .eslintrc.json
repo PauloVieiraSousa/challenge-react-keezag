@@ -6,6 +6,12 @@
   "extends": ["airbnb", "airbnb/hooks"],
   "parser": "babel-eslint",
   "plugins": ["react", "jsx-a11y", "import"],
+  "object-curly-newline": [
+    "error",
+    {
+      "ObjectExpression": "never"
+    }
+  ],
   "rules": {
     "react/jsx-filename-extension": [
       "error",

@@ -1,16 +1,16 @@
 import React from 'react';
-import './App.css';
 import { Switch, Route } from 'react-router-dom';
+import { Box } from '@material-ui/core';
 
-import Example from './page/Example/Example';
+import SignIn from './page/signin/signin';
 
 const App = () => (
-  <div>
+  <Box css={{ height: '100%' }}>
     <Switch>
-      <Route path="/" exact component={Example} />
-      <Route path="/example" component={Example} />
+      <Route path="/" exact component={SignIn} />
+      <Route path="/signin" component={SignIn} />
     </Switch>
-  </div>
+  </Box>
 );
 
 export default App;
