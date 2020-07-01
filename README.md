@@ -2,8 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d8a5b0f2d64d4c6880fff74988e8b301)](https://www.codacy.com/manual/PauloVieiraSousa/challenge-react-keezag?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PauloVieiraSousa/challenge-react-keezag&amp;utm_campaign=Badge_Grade)
-
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d8a5b0f2d64d4c6880fff74988e8b301)](https://www.codacy.com/manual/PauloVieiraSousa/challenge-react-keezag?utm_source=github.com&utm_medium=referral&utm_content=PauloVieiraSousa/challenge-react-keezag&utm_campaign=Badge_Grade)
 
 In the project directory, you can run:
 
@@ -45,6 +44,11 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Ui Framework
+
+Link: https://material-ui.com/
+Icons: https://material.io/resources/icons/?style=baseline
 
 ### Code Splitting
 
