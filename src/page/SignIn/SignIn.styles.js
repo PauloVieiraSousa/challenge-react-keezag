@@ -7,6 +7,10 @@ export const SigninStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center'
   },
+  alert: {
+    margin: '10px 0px 10px 0px',
+    width: '100%'
+  },
   paper: {
     display: 'flex',
     flexDirection: 'column',
