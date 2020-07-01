@@ -17,7 +17,7 @@ const reducer = (state = INITIAL_STATE, action) => {
     case SignIn.LOADING:
       return { ...state, loading: true };
     case SignIn.SUCCESS:
-      return { ...state, loading: false, error: null, data: action.data };
+      return { ...state, data: action.data, loading: false, error: null };
     case SignIn.FAILURE:
       return { ...state, loading: false, error: action.error };
     case SignIn.RESET:
