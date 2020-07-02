@@ -22,7 +22,7 @@ const CardComic = ({ hero }) => {
           />
         }
         title={hero.title}
-        subheader={`Data de Modificação: ${moment(hero.modified).format(
+        subheader={`Data Modificação: ${moment(hero.modified).format(
           'DD/MM/YYYY'
         )}`}
       ></CardHeader>

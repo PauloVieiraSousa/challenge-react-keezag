@@ -5,18 +5,14 @@ const useStyles = makeStyles((theme) =>
     root: {
       flexGrow: 1
     },
+    menuButton: {
+      marginRight: theme.spacing(2)
+    },
     title: {
       flexGrow: 1
     },
-    card: {
-      maxWidth: '33%'
-    },
-    container: {
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'center',
-      flexWrap: 'wrap',
-      marginTop: '80px'
+    bar: {
+      backgroundColor: '#fff'
     }
   })
 );

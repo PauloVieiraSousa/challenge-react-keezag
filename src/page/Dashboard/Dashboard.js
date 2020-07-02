@@ -1,35 +1,46 @@
 import React, { useContext, useEffect, useState } from 'react';
 import AuthContext from '../../shared/contexts/auth.context';
 import * as MarverServiceApi from '../../shared/services/marver-api.service';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import Toolbar from '@material-ui/core/Toolbar';
-import AppBar from '@material-ui/core/AppBar';
+import Container from '@material-ui/core/Container';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import useStyles from './Dashboard.style';
 import CardComic from '../../shared/components/CardComic/CardComic';
+import Header from '../../shared/components/Header/Header';
 
 const Dashboard = () => {
   const classes = useStyles();
-  const { user } = useContext(AuthContext);
+  const { user, signOut } = useContext(AuthContext);
+
+  const [loading, setLoading] = useState(false);
   const [comics, setComics] = useState([]);
 
   useEffect(() => {
-    MarverServiceApi.getCharacterComics(user.heroId).then((response) => {
-      console.log(response.data.data.results);
-      setComics(response.data.data.results);
-    });
+    setLoading(true);
+    MarverServiceApi.getCharacterComics(user.heroId)
+      .then((response) => {
+        setComics(response.data.data.results);
+      })
+      .finally(() => setLoading(false));
   }, [user]);
 
   return (
     <div>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Dashboard
-          </Typography>
-          <Button color="inherit">Signout</Button>
-        </Toolbar>
-      </AppBar>
+      <Header user={user} signOut={signOut} />
+      <Container maxWidth="lg" className={classes.container}>
+        {loading && <CircularProgress color="secondary" />}
+        {comics.map((comic) => (
+          <CardComic
+            key={comic.id}
+            className={classes.card}
+            hero={{
+              title: comic.title,
+              modified: comic.modified,
+              description: comic.description,
+              image: `${comic.thumbnail.path}.${comic.thumbnail.extension}`
+            }}
+          />
+        ))}
+      </Container>
     </div>
   );
 };

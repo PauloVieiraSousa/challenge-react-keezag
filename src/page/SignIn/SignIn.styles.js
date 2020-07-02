@@ -13,8 +13,12 @@ export const SigninStyles = makeStyles((theme) => ({
   },
   paper: {
     display: 'flex',
+    backgroundColor: '#fff',
+    borderRadius: '10px',
+    padding: '20px',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
+    boxShadow: '0px 0px 8px 3px rgba(0,0,0,0.12)'
   },
   loading: {
     width: '100%',
