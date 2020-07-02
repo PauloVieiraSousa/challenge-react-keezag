@@ -1,9 +1,9 @@
 export const users = [
   {
     name: 'Bryon Hooper',
-    user: 'teste',
+    user: 'bryon',
     email: 'bryon_hooper4381@muall.tech',
-    password: '1',
+    password: '714941',
     heroId: 1009726
   },
   {
