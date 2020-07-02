@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-import * as auth from '../services/auth';
+import * as auth from '../services/auth.service';
 
 const AuthContext = createContext({ signed: true });
 
@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
 
   function signIn(data) {
     auth.signIn(data).then(
-      (response) => setUser(response.user),
+      (response) => setUser(response),
       ({ message }) => setError(message)
     );
   }
