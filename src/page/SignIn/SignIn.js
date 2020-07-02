@@ -7,7 +7,7 @@ import TextField from '@material-ui/core/TextField';
 import Alert from '@material-ui/lab/Alert';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { SigninStyles } from './SignIn.styles';
-import AuthContext from '../../shared/contexts/auth';
+import AuthContext from '../../shared/contexts/auth.context';
 
 const SignIn = () => {
   const classes = SigninStyles();
