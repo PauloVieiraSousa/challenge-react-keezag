@@ -36,7 +36,8 @@ const Dashboard = () => {
               title: comic.title,
               modified: comic.modified,
               description: comic.description,
-              image: `${comic.thumbnail.path}.${comic.thumbnail.extension}`
+              image: `${comic.thumbnail.path}.${comic.thumbnail.extension}`,
+              url: comic.urls[0].url
             }}
           />
         ))}
