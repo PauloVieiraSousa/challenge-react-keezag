@@ -30,18 +30,6 @@ const Dashboard = () => {
           <Button color="inherit">Signout</Button>
         </Toolbar>
       </AppBar>
-
-      {comics.map((comic) => (
-        <CardComic
-          key={comic.id}
-          hero={{
-            title: comic.title,
-            description: comic.description,
-            modified: comic.modified,
-            image: comic.thumbnail.path + '.' + comic.thumbnail.extension
-          }}
-        />
-      ))}
     </div>
   );
 };
